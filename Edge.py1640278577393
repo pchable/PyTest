@@ -1,0 +1,27 @@
+
+class Edge:
+    """Connector"""
+
+    _start: None
+    _end: None
+
+    def __init__(self, p_start, p_end):
+        self._start = p_start
+        self._end = p_end
+
+    
+
+
+    def connect(self, p_first, p_second):
+        connected = Edge()
+        connected._start = p_first._start
+        connected._end = p_second._end
+
+        return connected
+
+    def print(self):
+        print("Edge: \n")
+        print("\tStart: " + self._start )
+        print("\tEnd: " + self._end )
+
+

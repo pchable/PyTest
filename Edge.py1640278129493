@@ -1,0 +1,15 @@
+@dataclasses
+class Edge:
+    """Connector"""
+
+    _start : Edge
+
+
+    def __init__(self, p_start, p_end):
+        self._start = p_start
+        self._end = p_end
+
+    def connect(self, p_first: self, p_second: self) -> Edge:
+        connected = Edge()
+        connected._start = p_first._start
+        connected._end = p_second._end
